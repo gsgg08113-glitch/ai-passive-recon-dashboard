@@ -11,6 +11,7 @@ Features
 Run locally:
 
 pip install -r requirements.txt
+
 uvicorn app:app --reload
 
 Open browser:
