@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Passive Recon</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<h1>AI Passive Recon Dashboard</h1>
+
+<form method="post" action="/scan">
+<input name="domain" placeholder="example.com" required>
+<button type="submit">Run Recon</button>
+</form>
+
+{% if results %}
+
+<h2>Results for {{domain}}</h2>
+
+<h3>DNS Records</h3>
+<ul>
+{% for r in results.dns %}
+<li>{{r}}</li>
+{% endfor %}
+</ul>
+
+<h3>HTTP Headers</h3>
+<ul>
+{% for k,v in results.headers.items() %}
+<li>{{k}} : {{v}}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+padding:40px;
+}
+
+input{
+padding:10px;
+}
+
+button{
+padding:10px;
+background:#22c55e;
+border:none;
+color:white;
+}

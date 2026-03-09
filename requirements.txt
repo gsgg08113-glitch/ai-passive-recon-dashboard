@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+dnspython
+jinja2
+beautifulsoup4
